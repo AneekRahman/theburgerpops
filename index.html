@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    
+        <title>TheBurgerPops - Bangladesh's Biggest</title>
+        <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <script src="https://kit.fontawesome.com/fb6f11a9d8.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Poppins:300,400,500,700&display=swap" rel="stylesheet">
+
+    </head>
+    
+    <body>
+        
+        <div id="mainHolder">
+
+            <div id="holder1">
+                
+                <div id="bg_1"></div>
+                
+                <h1 class="noselect logo"><span>B</span><l id="pre">The</l>BurgerPops</h1>
+                
+                <div id="holder1shadow"></div>
+                
+                <i class="fab fa-facebook-square"></i>
+                
+                <div id="textHolder">
+                
+                    <h2>Best burgers in Bangladesh</h2>
+                    
+                    <p>Grave-meat fantasy meal out now! Check it out in out food section. You'll love it for sure</p>
+                
+                </div>
+                
+                <div id="textHolder2">
+                
+                    <h5>Check us out</h5>
+                    <p>More in our social media</p>
+                
+                </div>
+
+            </div>
+            
+            <div id="holder2">
+            
+                <div id="left">
+                    
+                    <h2>Premium Burgers!</h2>
+                
+                    <p>Enter a new world with our beautifully crafted burgers, your mouth will start flowing when you see our arsenal</p>
+                
+                </div>
+                
+                <div id="right">
+                
+                    <div class="card" style="background-image: url(combo.jpg)">
+                    
+                        <p>Combos</p>
+                    
+                    </div>
+                    
+                    <div class="card" style="background-image: url(big_burger.jpg)">
+                    
+                        <p>Big Buns</p>
+                    
+                    </div>
+                
+                </div>
+            
+            </div>
+            
+            <div id="holder3">
+                
+                <div id="left2">
+                
+                    <div id="bg_3"></div>
+                
+                </div>
+                
+                <div id="right2">
+                
+                    <h2>Juicy & Sipcy</h2>
+                    
+                    <p>Our premium burgers come in all taste and spices. From juice filled mouth watering bits to naga torture, we have it all</p>
+                
+                </div>
+                        
+            </div>
+            
+            <div id="holder4">
+            
+                
+                <div id="left3">
+                
+                    <h2>Heart's Desire</h2>
+                    
+                    <p>This is what your heart desires. From juice filled mouth watering bits to naga torture, we have it all. You'll get everything you ask for!</p>
+                
+                </div>
+                
+                <div id="right3">
+                
+                    <img src="trans_burger.png" class="follow" style="position: absolute;"/>
+                
+                </div>
+            
+            
+            </div>
+            
+            <div id="holder6">
+            
+                <div id="shadow_1"></div>
+                
+                <p>Visit us today</p>
+            
+            </div>
+            
+            <div id="holder5">
+            
+                <p>BEAR Technologies &reg;</p>
+            
+            </div>
+        
+        </div>
+        
+        
+        
+        <div id="navBar">
+            
+            <div id="bg_2"></div>
+                    
+            <div class="navBlock">
+
+                <i class="fas fa-home"></i>
+                <p>Home</p>
+                
+            </div>
+            
+            <div class="navBlock">
+            
+                <i class="fas fa-hamburger"></i>
+                <p>Foods</p>
+            
+            </div>
+            
+            <div class="navBlock">
+            
+                <i class="fas fa-info-circle"></i>
+                <p>Know us</p>
+            
+            </div>
+            
+            <div class="navBlock">
+            
+                <i class="fas fa-thumbs-up"></i>
+                <p>Social Medias</p>
+            
+            </div>
+        
+        </div>
+        
+        <!-- Scripts link -->
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <!-- My JS Scripts -->
+        
+        <script>
+        
+            $(window).scroll(function(event){
+                
+                var scrolled = $(this).scrollTop();
+                var percent = Math.round(90 * (scrolled/ $(document).height()))
+                console.log(scrolled / $(document).height())
+                
+                $("#navBar").css({
+                    
+                    "background-position" : percent + "%"
+                    
+                })
+                
+            });
+            
+            $(window).on('unload', function(){
+
+            
+                
+            });
+            
+            $("#textHolder2").on("click", function(e){
+                
+                $("body").css({"opacity" : "0"})
+                
+                setTimeout(function(){
+                    
+                     window.location = document.location.origin + "/bear.html"
+                    
+                }, 300)
+                
+            })
+            
+            $(document).mousemove(function(e){
+                
+                var y = e.clientY * .03;
+                var x = e.clientX * .02;
+                
+                $('.follow').css({'top': y, 'left': x});
+                
+            });
+        
+        </script>
+    
+    </body>
+
+</html>
